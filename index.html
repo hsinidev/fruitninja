@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-912D4ZR2HV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-912D4ZR2HV');
+</script>
+
+<!-- Robust Anti-Reload (Blocking Live Server) -->
+<script>
+(function() {
+    const block = (m) => console.log("Blocking reload attempt: " + m);
+    try {
+        // Simple override
+        window.location.reload = function() { block("location.reload"); };
+        window.history.go = function() { block("history.go"); };
+        window.location.replace = function() { block("location.replace"); };
+        
+        // Prevent meta refresh
+        const preventRefresh = () => {
+            const refresh = document.querySelector('meta[http-equiv="refresh"]');
+            if (refresh) {
+                console.log("Blocking meta refresh");
+                refresh.remove();
+            }
+        };
+        setInterval(preventRefresh, 1000);
+
+        // Block beforeunload popup if it exists
+        window.addEventListener('beforeunload', (event) => {
+            event.stopImmediatePropagation();
+        }, true);
+
+    } catch(e) { console.error("Reload fix error:", e); }
+})();
+</script>
+
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <meta name="theme-color" content="#000000" />
+
+    <link rel="manifest" href="./manifest.json" />
+    <script src="/js/main.js"></script>
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="Fruit Ninja" />
+    <meta name="apple-mobile-web-app-title" content="Fruit Ninja" />
+    <meta name="msapplication-starturl" content="./" />
+    <script type="text/javascript" src="h5Sdk.js"></script>
+    <script src="/js/main.js"></script>
+
+    <title>Fruitninja - Play Online for Free</title>
+    <meta name="description" content="Play Fruitninja online for free. Unblocked and available on all devices. Experience the best Fruitninja gameplay now!"> 
+    <meta name="author" content="HSINI">
+    <style>
+      @font-face {
+        font-family: gangofchinese;
+        src: url('assets/font/gangofchinese.ttf');
+      }
+
+      body{
+          background-color: #000000;
+          margin: 0;
+
+          height: 100%;
+          max-height: 100vh !important;
+          overflow: hidden;
+          position: relative;
+      }
+
+      .fontLoader{
+          position: absolute;
+          left: -1000px;
+          visibility: hidden;
+      }
+
+      #phaser-canvas{
+          margin: 0 auto;
+      }
+
+      /*#enable3d-three-canvas{
+          position: sticky !important;
+      }*/
+      /*#enable3d-phaser-canvas{
+          margin: 0 auto;
+          position: absolute !important;
+      }*/
+
+      body,#content{
+          height: 100vh !important;
+          max-height: 100vh !important;
+      }
+
+      #divAds, #tempads{
+          display: none;
+          /*background-color: green;*/
+      }
+
+      canvas{
+          width: 100%;
+          height: 100%;
+          display: grid !important;
+          grid-area: 1/1;
+          /*position: sticky !important;*/
+          /*margin: 0 auto !important;*/
+          margin-top: 0 !important;
+          margin-bottom: 0 !important;
+          /*margin-left: auto !important;
+          margin-right: auto !important;*/
+          padding: 0 !important;
+          max-width: 100% !important;
+          max-height: 100vh !important;
+      }
+
+    </style>
+    <!-- <link rel="stylesheet" type="text/css" href="css/styles.css"> -->
+
+    <noscript>Please enable javascript to continue using this application.</noscript>
+
+    <script>window.adsbygoogle = window.adsbygoogle || [];
+        const adBreak =  adConfig = function(o) {adsbygoogle.push(o);}
+    </script>
+    <!-- installs the serviceWorker -->
+    <!-- <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('./sw.js')
+        })
+      }
+    </script> -->
+  
+    <meta property="og:title" content="Fruitninja - Play Online for Free">
+    <meta property="og:description" content="Play Fruitninja online for free. Unblocked and available on all devices. Experience the best Fruitninja gameplay now!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://unlockedgames.io/fruitninja/">
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": [
+    "VideoGame",
+    "SoftwareApplication"
+  ],
+  "name": "Fruitninja",
+  "description": "Play Fruitninja online for free. Unblocked and available on all devices. Experience the best Fruitninja gameplay now!",
+  "url": "https://unlockedgames.io/fruitninja/",
+  "applicationCategory": "Game",
+  "operatingSystem": "Any",
+  "genre": "Arcade",
+  "inLanguage": "en",
+  "isAccessibleForFree": true
+}</script>
+
+    <meta property="og:title" content="Fruitninja - Play Online for Free">
+    <meta property="og:description" content="Play Fruitninja online for free. Unblocked and available on all devices. Experience the best Fruitninja gameplay now!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://unlockedgames.io/fruitninja/">
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": [
+    "VideoGame",
+    "SoftwareApplication"
+  ],
+  "name": "Fruitninja",
+  "description": "Play Fruitninja online for free. Unblocked and available on all devices. Experience the best Fruitninja gameplay now!",
+  "url": "https://unlockedgames.io/fruitninja/",
+  "applicationCategory": "Game",
+  "operatingSystem": "Any",
+  "genre": "Arcade",
+  "inLanguage": "en",
+  "isAccessibleForFree": true
+}</script>
+
+    <meta property="og:title" content="Fruitninja - Play Online for Free">
+    <meta property="og:description" content="Play Fruitninja online for free. Unblocked and available on all devices. Experience the best Fruitninja gameplay now!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://unlockedgames.io/fruitninja/">
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": [
+    "VideoGame",
+    "SoftwareApplication"
+  ],
+  "name": "Fruitninja",
+  "description": "Play Fruitninja online for free. Unblocked and available on all devices. Experience the best Fruitninja gameplay now!",
+  "url": "https://unlockedgames.io/fruitninja/",
+  "applicationCategory": "Game",
+  "operatingSystem": "Any",
+  "genre": "Arcade",
+  "inLanguage": "en",
+  "isAccessibleForFree": true
+}</script>
+
+    <meta property="og:title" content="Fruitninja - Play Online for Free">
+    <meta property="og:description" content="Play Fruitninja online for free. Unblocked and available on all devices. Experience the best Fruitninja gameplay now!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://unlockedgames.io/fruitninja/">
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": [
+    "VideoGame",
+    "SoftwareApplication"
+  ],
+  "name": "Fruitninja",
+  "description": "Play Fruitninja online for free. Unblocked and available on all devices. Experience the best Fruitninja gameplay now!",
+  "url": "https://unlockedgames.io/fruitninja/",
+  "applicationCategory": "Game",
+  "operatingSystem": "Any",
+  "genre": "Arcade",
+  "inLanguage": "en",
+  "isAccessibleForFree": true,
+  "author": {
+    "@type": "Person",
+    "name": "HSINI"
+  }
+}</script>
+
+    <meta property="og:title" content="Fruitninja - Play Online for Free">
+    <meta property="og:description" content="Play Fruitninja online for free. Unblocked and available on all devices. Experience the best Fruitninja gameplay now!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://unlockedgames.io/fruitninja/">
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": [
+    "VideoGame",
+    "SoftwareApplication"
+  ],
+  "name": "Fruitninja",
+  "description": "Play Fruitninja online for free. Unblocked and available on all devices. Experience the best Fruitninja gameplay now!",
+  "url": "https://unlockedgames.io/fruitninja/",
+  "applicationCategory": "Game",
+  "operatingSystem": "Any",
+  "genre": "Arcade",
+  "inLanguage": "en",
+  "isAccessibleForFree": true,
+  "author": {
+    "@type": "Person",
+    "name": "HSINI"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "hsinidev"
+  }
+}</script>
+</head>
+  <body>
+    <div class="fontLoader" style="font-family: gangofchinese;">-</div>
+    <div id="content">
+        <div id="phaser-canvas"></div>
+    </div>        
+    <!-- <div id="phaser-game"></div> -->
+  <script type="text/javascript" src="vendors.fb6f2f7c51aa86f87ee3.bundle.js"></script><script type="text/javascript" src="main.bb79cf245c33f6bf6733.bundle.js"></script><style id="injectStyles">html, body{ background: none !important; }</style>
+
+<!-- SEO CONTENT (Hidden) -->
+<div class="seo-generated-content" style="display:none; visibility:hidden;">
+<h2>Fruitninja: A Deliciously Challenging Browser Game</h2>
+
+<p>A fruit ninja game where players must slice fruits into precise pieces to score points, while avoiding obstacles.</p>
+
+<h3>Game Overview</h3>
+<p>Playing Fruitninja involves using the mouse to navigate through a maze of fruits and slices. The objective is to clear the screen by slicing as many fruits into individual pieces as possible.</p>
+
+<h2>How to Play (Controls and Objective)</h2>
+<p><strong>Mouse Controls:</strong> Move the mouse left or right to navigate between fruit rows, then click on a fruit row to start slicing. Use your mouse wheel to zoom in and out of the screen.</p>
+
+<p><strong>Objective:</strong> Clear as many fruits into individual pieces as possible before time runs out. The game gets progressively harder as you progress.</p>
+
+<h3>Tips and Tricks for Success</h3>
+<p><h4>Mouse Technique:</h4> Learn to accurately position your mouse cursor over the fruit rows without clicking on a slice, allowing you to slice multiple fruits at once.</p>
+
+<p><h4>Strategy and Patience:</h4> Plan ahead and think strategically about which fruits to prioritize. Focusing on clearing larger sections of fruit can help you conserve time in the long run.</p>
+
+<p><h4>Obstacle Avoidance:</h4> Watch out for obstacles like moving enemies that try to block your path or falling slices that will harm your progress.</p>
+
+<h2>Why You Should Play It</h2>
+<p>Fruitninja offers a fun and challenging experience that's perfect for players looking to relax and unwind. With its unique gameplay mechanics, colorful graphics, and addictive nature, it's easy to get hooked on this browser game.</p>
+
+<p>Whether you're a casual browser gamer or an experienced player, Fruitninja has something for everyone. The game is free to play, with no ads or in-app purchases required to progress through levels.</p>
+
+<p>By downloading and playing Fruitninja, you can enjoy hours of entertainment without the commitment of a full-fledged gaming experience. So why not give it a try? With its engaging gameplay and relaxing atmosphere, Fruitninja is sure to provide an enjoyable experience for all players.</p>
+</div>
+<script>
+    // Silently block specific Live Server reload triggers if possible
+    
+</script>
+</body>
+</html>
